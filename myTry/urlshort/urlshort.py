@@ -32,7 +32,7 @@ def your_url(): #name of function and route do not need to match
             f = request.files['file']
             #make sure files are not the same name so know that code file name will be unique 
             full_name = request.form['code'] + secure_filename(f.filename)
-            f.save('/Users/eliot/Desktop/url_shortener/urlshort/static/user_files/' + full_name) #decide where to save the file  with this specific name
+            f.save('/Users/eliot/Desktop/url_shortener/myTry/urlshort/static/user_files/' + full_name) #decide where to save the file  with this specific name
             urls[request.form['code']] = {'file':full_name} #saves file for this code 
             
 
